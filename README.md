@@ -5,8 +5,8 @@ This repository contains a lightweight PHP framework designed for building APIs 
 ## Features
 
 - **Lightweight**: The framework is designed to be minimal and efficient, focusing on essential API development features.
-- **Easy to use**: Provides a simple and intuitive structure for creating API endpoints[1].
-- **Flexible**: Allows developers to customize and extend functionality as needed[1].
+- **Easy to use**: Provides a simple and intuitive structure for creating API endpoints.
+- **Flexible**: Allows developers to customize and extend functionality as needed.
 
 ## Installation
 
