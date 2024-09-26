@@ -40,7 +40,8 @@ codebase-root/
 
 - `codebase-root/` is the root directory of the codebase. Choose any directory.
 
-- `codebase-root/api-funcs-base/` is the directory where all the API functions are stored. *This directory can be named anything.*
+- `codebase-root/api-funcs-base/` is the directory where all the API definitions are stored.
+    *Directory name does not need to be `api-funcs-base`. It can be anything.*
 
 	- `@all.php` [Optional] is the file that is called for all the functions in this directory ***and its subdirectories***.
 
@@ -63,7 +64,8 @@ codebase-root/
 			- `Hello.php` is the file that defines the api available at https://api.sample.dev/example.camel_case.hello
 
 
-- `codebase-root/public/` is the public directory where the server is running. *This directory can be named anything.*
+- `codebase-root/public/` is the public directory where the server is running.
+    *Directory name does not need to be `public`. It can be anything.*
 
 	- `.htaccess` is the file that redirects all requests to `index.php`.
 
