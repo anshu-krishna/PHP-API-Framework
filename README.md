@@ -9,7 +9,7 @@ This is a simple API framework that can be used to create APIs.
 composer require anshu-krishna/api-framework
 ```
 
-## Quick Start (using the provides sample code as example):
+## Quick Start Guide (using the provided sample code as example):
 
 Let's create a simple API server and on the way learn how to use this framework.
 
