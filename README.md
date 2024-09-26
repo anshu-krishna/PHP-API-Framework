@@ -38,38 +38,39 @@ codebase-root/
 
 #### Explanation of the listed files:
 
-- `codebase-root/` is the root directory of the codebase. Choose any directory.
+- `codebase-root/` This is the root directory of the codebase. (Choose any directory).
 
-- `codebase-root/api-funcs-base/` is the directory where all the API definitions are stored.
-    *Directory name does not need to be `api-funcs-base`. It can be anything.*
+- `codebase-root/api-funcs-base/` This is the directory where all the API definitions are stored.
+    (Directory name does not need to be `api-funcs-base`. It can be anything.)
 
-	- `@all.php` [Optional] is the file that is called for all the functions in this directory ***and its subdirectories***.
+	- `@all.php` [Optional] This file is executed before all the APIs in this directory **and its subdirectories**.
 
-	- `@index.php` [Optional] File that defines the api available at https://api.sample.dev
+	- `@index.php` [Optional] This file defines the API available at https://api.sample.dev
 
-	- `Ping.php` is the file that defines the api available at https://api.sample.dev/ping
+	- `Ping.php` This file defines the API available at https://api.sample.dev/ping
 
-	- `Example/` is a directory that contains more API functions.
+	- `Example/` This directory contains all APIs grouped under 'example' API.
 
-		- `@all.php` [Optional] is the file that is called for all the functions in this directory ***and its subdirectories***.
+		- `@all.php` [Optional] This file is executed before all the APIs in this directory **and its subdirectories**.
 
-		- `@index.php` [Optional] File that defines the api available at https://api.sample.dev/example
+		- `@index.php` [Optional] This file defines the API available at https://api.sample.dev/example
 
-		- `Adder.php` is the file that defines the api available at https://api.sample.dev/example.adder
+		- `Adder.php` This file defines the API available at https://api.sample.dev/example.adder
 
-		- `CamelCase/` is a directory that contains more API functions.
+		- `CamelCase/` This directory contains all APIs grouped under 'example.camel_case' API.
 
-			- `@index.php` [Optional] File that defines the api available at https://api.sample.dev/example.camel_case
+			- `@index.php` [Optional] This file defines the API available at https://api.sample.dev/example.camel_case
 
-			- `Hello.php` is the file that defines the api available at https://api.sample.dev/example.camel_case.hello
+			- `Hello.php` This file defines the API available at https://api.sample.dev/example.camel_case.hello
 
 
-- `codebase-root/public/` is the public directory where the server is running.
+- `codebase-root/public/` This is the public directory where the server is running.
+    (i.e. https://api.sample.dev must point to this directory.)
     *Directory name does not need to be `public`. It can be anything.*
 
-	- `.htaccess` is the file that redirects all requests to `index.php`.
+	- `.htaccess` This file is used to rewrite the URLs to the API framework.
 
-	- `index.php` is the file that initializes the API framework.
+	- `index.php` This file is the entry point of the server.
 
 
 
