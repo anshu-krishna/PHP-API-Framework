@@ -26,6 +26,12 @@ final class Server {
 	
 	private static $custom_final_writer = null; // ?callable
 
+	public static function getVersion() : string {
+		$content = file_get_contents(__DIR__ . '/../composer.json');
+		$content = JSON::decode($content);
+		return $content['version'] ?? 'not found';
+	}
+
 	public static function set_custom_final_writer(?callable $func) : void {
 		self::$custom_final_writer = $func;
 	}
@@ -34,6 +40,7 @@ final class Server {
 		self::$direct_exit = true;
 		exit(0);
 	}
+
 	public static function init(?string $func_base_path = null) :void {
 		if(self::$init_flag) {
 			return;

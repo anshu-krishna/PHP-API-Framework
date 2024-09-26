@@ -5,6 +5,7 @@ use Krishna\DataValidator\ComplexException;
 use Krishna\DataValidator\ObjectHandler;
 use Krishna\DataValidator\OutOfBoundAction;
 use Krishna\DataValidator\Validator;
+use Krishna\Utilities\Debugger;
 
 final class Func {
 	use \Krishna\Utilities\StaticOnlyTrait;
@@ -82,6 +83,7 @@ final class Func {
 			require_once $func_file;
 		} else {
 			// API home page default message
+			Debugger::dump(Server::getVersion(), 'API Framework Version');
 			return 'You have reached the API server; Welcome';
 		}
 
