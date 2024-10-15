@@ -151,6 +151,7 @@ final class Server {
 		unset(self::$request['path']);
 	}
 	private static function _default_final_writer_(mixed $value = null, StatusType $status = StatusType::OK) {
+		$is_jsonp = Config::$allow_jsonp && self::$request['jsonp'] !== null;
 		if(!headers_sent()) {
 			if(
 				Config::$zlib === true
@@ -174,7 +175,6 @@ final class Server {
 					header($h);
 				}
 			}
-			$is_jsonp = Config::$allow_jsonp && self::$request['jsonp'] !== null;
 			if(Config::$send_content_type === true) {
 				if($is_jsonp) {
 					header('Content-type: application/javascript; charset=utf-8');
