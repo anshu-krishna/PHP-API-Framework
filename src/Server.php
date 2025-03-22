@@ -60,7 +60,7 @@ final class Server {
 				'msg' => $errstr,
 				'trace' => debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS)
 			], StatusType::DEV_ERR);
-		}, E_ALL | E_STRICT);
+		}, E_ALL);
 		register_shutdown_function(function () {
 			if(!self::$direct_exit) {
 				if(($error = error_get_last()) !== null) {
